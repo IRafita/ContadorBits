@@ -1,0 +1,23 @@
+00 -> 00
+01, 10 -> 01
+11 -> 10
+
+( taula feta amb HH━, VH╋ i VV┃
+Primer bit
+ ┃01
+━╋━━
+0┃00
+1┃01
+
+Segon bit
+ ┃01
+━╋━━
+0┃01
+1┃10
+
+
+Primer bit és un AND
+Segon  bit és un XOR
+
+Electricament esta prou clar.
+Pero ara, en c, no em queda tant clar com poder-ho fer

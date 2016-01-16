@@ -1,0 +1,63 @@
+000
+
+001
+010
+100
+
+011
+101
+110
+
+111
+
+
+necessitaria una taula pero de 3 dimencions?
+
+Primer intent jiji
+
+d <- mes significatiu	El segon mes significatiu
+el mes petit
+
+El mes significatiu ( nomes dos bits )
+0┃01 ∥ 1┃01
+━╋━━ ∥ ━╂━━
+0┃00 ∥ 0┃01
+1┃01 ∥ 1┃11
+
+0┃01 ∥ 1┃01
+━╋━━ ∥ ━╂━━
+0┃01 ∥ 0┃10
+1┃10 ∥ 1┃01
+
+
+La vritat, no sem ocurreix com fer-ho
+Mapa de Karnaugh
+
+La forma mes simple que sem ocor
+( ⌐0 ∧ ( 1 ∧ 2 ) ) ∨ ( 0 ∧ ( 1 ∨ 2 ) )
+
+Segur que existeix alguna forma de simplificar aquesta operacio logica.
+El que se pot fer en nomes en dos operacions logiques ( raonat en paper )
+( ⌐0 ∧ 1 ∧ 2 ) ∨ ( 0 ∧ 1 ) ∨ ( 0 ∧ 2 ) ≡ (ō * 1 * 2 ) + ( 0 * 1 ) + ( 0 * 2 )
+
+
+El seguent
+( ⌐0 ∧ ( 1 XOR 2 ) ) ∨ ( 0 ∧ ( 1 NXOR 2 ) )
+( ⌐0 ∧ ( ( 1 ∧ ⌐2 ) ∨ ( ⌐1 ∧ 2 ) ) ) ∨ ( 0 ∧ ( ( 1 ∧ 2 ) ∨ ( ⌐1 ∧ ⌐2 ) ) )
+( ⌐0 ∧ ( ( 1 ∧ ⌐2 ) ∨ ( ⌐1 ∧ 2 ) ) ) ≡ ( ā * e * ḡ ) + ( ā * ē * g )
+( 0 ∧ ( ( 1 ∧ 2 ) ∨ ( ⌐1 ∧ ⌐2 ) ) ) ≡ ( a * e * g ) + ( a * ē * ḡ )
+
+( ā * e * ḡ ) + ( ā * ē * ḡ ) + ( a * e * g ) + ( a * ē * ḡ )
+O ordenem per nombre de negats
+( a * e * g ) + ( a * ē * ḡ ) + ( ā * e * ḡ ) + ( ā * ē * g )
+
+Comprovacio d'aquest ultim resultat
+000 -> 0
+001 -> 1
+010 -> 1
+011 -> 0
+100 -> 1
+101 -> 0
+110 -> 0
+111 -> 1
+Aparentment corregit i correcte :)
